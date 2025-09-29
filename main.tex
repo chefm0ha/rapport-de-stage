@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt,english]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{makeidx}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{eurosym}
+\usepackage[top=3cm, bottom=3cm, left=1.5cm, right=2cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\usepackage{array,multirow,makecell}
+\setcellgapes{3pt}
+\setlength{\parindent}{1.1cm}
+\makegapedcells
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{\textbf{\thepage}}
+\fancyfoot[R]{Academic Year: 2024/2025}
+\fancyfoot[L]{ENSIAS}
+
+\usepackage{blindtext}
+\begin{document}
+
+% \pagenumbering{gobble} % Supprimer la numérotation des pages
+
+\input{tex/1.page de garde}
+
+\include{tex/2.dedicace}
+
+\include{tex/3.remerciements}
+
+\include{tex/5.abstract}
+
+\include{tex/6.abreviations}
+
+\listoffigures
+
+\renewcommand{\contentsname}{Table de matières}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\cleardoublepage
+\pagenumbering{arabic} % Commencer la numérotation des pages à partir de la 8ème page en chiffres arabes
+\setcounter{page}{9}
+
+
+\addcontentsline{toc}{chapter}{General Introduction}
+\include{tex/7.introduction generale}
+
+\setcounter{chapter}{1}
+\include{tex/chapters/chapitre 1}
+
+\setcounter{chapter}{2}
+\include{tex/chapters/chapitre 2}
+
+\setcounter{chapter}{3}
+\include{tex/chapters/chapitre 3}
+ 
+\addcontentsline{toc}{chapter}{General conclusion}
+\include{tex/8.conclusion generale}
+
+\include{tex/9.webographie}
+
+\end{document}
